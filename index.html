@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scott’s BBQ | Cochran, GA</title>
+  <meta name="description" content="Scott’s BBQ in Cochran, GA — authentic Southern barbecue and homestyle sides. Call to order: (478) 934-6069." />
+
+  <!-- LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Scott’s BBQ",
+    "telephone": "+1-478-934-6069",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "425 GA-87",
+      "addressLocality": "Cochran",
+      "addressRegion": "GA",
+      "postalCode": "31014",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --card:#161618;
+      --muted:#a7a7aa;
+      --text:#f3f3f4;
+      --accent:#ffb02e;
+      --accent2:#ff6a2e;
+      --line:#2a2a2e;
+      --max:1100px;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0b0c, #111114 40%, #0b0b0c);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(15,15,16,.82);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .topbar-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;
+      gap:12px;
+    }
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{
+      width:36px;height:36px;border-radius:12px;
+      background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));
+      box-shadow: 0 10px 30px rgba(255,176,46,.18);
+    }
+    .brand h1{font-size:16px;margin:0;letter-spacing:.2px}
+    .nav{display:flex;gap:14px;flex-wrap:wrap}
+    .nav a{font-size:13px;color:var(--muted);text-decoration:none}
+    .nav a:hover{color:var(--text)}
+    .cta{
+      display:inline-flex;align-items:center;gap:10px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      color:#101011;
+      padding:10px 14px;border-radius:999px;
+      text-decoration:none;font-weight:700;font-size:14px;
+      box-shadow:0 12px 30px rgba(255,106,46,.18);
+      white-space:nowrap;
+    }
+
+    header.hero{padding:44px 0 18px}
+    .hero-grid{
+      display:grid;grid-template-columns: 1.3fr .7fr;gap:18px;
+    }
+    @media (max-width:900px){ .hero-grid{grid-template-columns:1fr} }
+    .hero-card{
+      background:linear-gradient(180deg, rgba(255,176,46,.08), rgba(255,106,46,.05));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:26px;
+      overflow:hidden;
+      position:relative;
+      min-height:250px;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute;inset:-60px -60px auto auto;
+      width:220px;height:220px;border-radius:999px;
+      background: radial-gradient(circle, rgba(255,176,46,.22), transparent 60%);
+      transform: rotate(10deg);
+    }
+    .kicker{color:var(--accent);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+    .hero-title{font-size:44px;line-height:1.05;margin:10px 0 10px}
+    @media (max-width:520px){ .hero-title{font-size:34px} }
+    .hero-sub{color:var(--muted);font-size:16px;line-height:1.55;margin:0 0 18px;max-width:56ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+    .ghost{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      text-decoration:none;color:var(--text);
+      font-weight:700;font-size:14px;
+      background:rgba(255,255,255,.03);
+    }
+    .ghost:hover{border-color:rgba(255,255,255,.22)}
+    .info-card{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:18px;
+      display:grid;gap:10px;
+      height:100%;
+    }
+    .info-row{display:flex;gap:10px;align-items:flex-start}
+    .dot{width:10px;height:10px;border-radius:99px;background:var(--accent);margin-top:6px;flex:0 0 auto}
+    .info-row b{display:block}
+    .muted{color:var(--muted)}
+    section{padding:26px 0}
+    .section-title{font-size:22px;margin:0 0 10px}
+    .section-sub{color:var(--muted);margin:0 0 14px;line-height:1.6}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width:900px){ .grid2{grid-template-columns:1fr} }
+    .card{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px 10px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;font-size:14px}
+    th{color:var(--muted);font-weight:700}
+    .price{text-align:right;font-weight:800}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.15);
+      color:var(--muted);font-size:13px
+    }
+    .stars{letter-spacing:2px;color:var(--accent)}
+    footer{padding:26px 0 40px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+    .footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .small{font-size:13px;line-height:1.6}
+    .map{
+      width:100%;height:320px;border:0;border-radius:16px;
+      filter:saturate(1.05) contrast(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Scott’s BBQ</h1>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#location">Location</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+
+      <a class="cta" href="tel:+14789346069">Call to Order • (478) 934-6069</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-card">
+        <div class="kicker">Cochran, Georgia</div>
+        <div class="hero-title">Authentic BBQ.<br/>Slow-smoked daily.</div>
+        <p class="hero-sub">
+          Scott’s BBQ serves up classic Southern barbecue and homestyle sides —
+          simple, smoky, and satisfying. Call ahead for takeout and bulk orders.
+        </p>
+
+        <div class="hero-actions">
+          <a class="cta" href="tel:+14789346069">Call to Order</a>
+          <a class="ghost" href="#menu">View Take-Home Menu</a>
+          <a class="ghost" href="#location">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="info-card" aria-label="Quick info">
+        <div class="pill">Open • Closes 8 PM</div>
+        <div class="info-row">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <b>Address</b>
+            <div class="muted">425 GA-87, Cochran, GA 31014</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <b>Phone</b>
+            <div class="muted"><a href="tel:+14789346069">(478) 934-6069</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <b>Best for</b>
+            <div class="muted">Takeout • Family meals • Bulk orders</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap grid2">
+        <div class="card">
+          <h2 class="section-title">About Scott’s BBQ</h2>
+          <p class="section-sub">
+            A local Cochran favorite for real Southern barbecue and sides.
+            If you’re feeding the family, grabbing lunch, or planning for a crowd —
+            give us a call and we’ll get you taken care of.
+          </p>
+          <div class="pill">Hardwood smoke • Homestyle sides • Friendly service</div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Call Ahead</h2>
+          <p class="section-sub">
+            Want to pick up quickly? Call to order and we’ll have it ready.
+            Ask about bulk meat by the pound, party-size sides, and stew by the gallon.
+          </p>
+          <a class="cta" href="tel:+14789346069">Call Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="wrap">
+        <h2 class="section-title">Take Some Home</h2>
+        <p class="section-sub">Take-home pricing (call for availability and larger orders).</p>
+
+        <div class="card" style="overflow:auto">
+          <table aria-label="Take-home menu">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Size</th>
+                <th class="price">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Chipped BBQ</td><td>1 lb</td><td class="price">$11.50</td></tr>
+              <tr><td>Sliced BBQ</td><td>1 lb</td><td class="price">$12.50</td></tr>
+              <tr><td>BBQ Chicken</td><td>Half</td><td class="price">$5.25</td></tr>
+              <tr><td>BBQ Chicken</td><td>Whole</td><td class="price">$9.25</td></tr>
+              <tr><td>BBQ Pork Ribs</td><td>One side</td><td class="price">$21.25</td></tr>
+
+              <tr><td><b>Brunswick Stew</b></td><td>Pint</td><td class="price">$5.25</td></tr>
+              <tr><td>Brunswick Stew</td><td>Quart</td><td class="price">$8.25</td></tr>
+              <tr><td>Brunswick Stew</td><td>Gallon</td><td class="price">$24.00</td></tr>
+
+              <tr><td><b>Potato Salad</b></td><td>Pint</td><td class="price">$5.25</td></tr>
+              <tr><td>Potato Salad</td><td>Quart</td><td class="price">$8.25</td></tr>
+              <tr><td>Potato Salad</td><td>Gallon</td><td class="price">$24.00</td></tr>
+
+              <tr><td><b>Cole Slaw</b></td><td>Pint</td><td class="price">$5.25</td></tr>
+              <tr><td>Cole Slaw</td><td>Quart</td><td class="price">$8.25</td></tr>
+              <tr><td>Cole Slaw</td><td>Gallon</td><td class="price">$24.00</td></tr>
+
+              <tr><td><b>Baked Beans</b></td><td>Pint</td><td class="price">$5.25</td></tr>
+              <tr><td>Baked Beans</td><td>Quart</td><td class="price">$8.25</td></tr>
+              <tr><td>Baked Beans</td><td>Gallon</td><td class="price">$24.00</td></tr>
+
+              <tr><td>Chicken Salad</td><td>Pint</td><td class="price">$11.50</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="cta" href="tel:+14789346069">Call to Order</a>
+          <span class="pill">Prices subject to change</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="catering">
+      <div class="wrap grid2">
+        <div class="card">
+          <h2 class="section-title">Catering / Bulk Orders</h2>
+          <p class="section-sub">
+            Feeding a crowd? Call ahead for party-size orders.
+            Great for game day, family gatherings, church events, and work lunches.
+          </p>
+          <ul class="muted" style="margin:0;padding-left:18px;line-height:1.8">
+            <li>BBQ by the pound</li>
+            <li>Brunswick stew by the gallon</li>
+            <li>Large sides (slaw, beans, potato salad)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Fast Pickup</h2>
+          <p class="section-sub">
+            Call in your order and we’ll have it ready for pickup.
+          </p>
+          <a class="cta" href="tel:+14789346069">Call (478) 934-6069</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="wrap">
+        <h2 class="section-title">Location</h2>
+        <p class="section-sub">
+          425 GA-87, Cochran, GA 31014 • <a href="tel:+14789346069">(478) 934-6069</a>
+        </p>
+
+        <div class="card">
+          <iframe
+            class="map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=425%20GA-87,%20Cochran,%20GA%2031014&output=embed"
+            title="Google Map to Scott’s BBQ">
+          </iframe>
+          <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="ghost" href="https://www.google.com/maps?q=425%20GA-87,%20Cochran,%20GA%2031014" target="_blank" rel="noopener">Open in Google Maps</a>
+            <span class="pill">Open • Closes 8 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="wrap">
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-sub">A few words customers commonly share about Scott’s BBQ.</p>
+
+        <div class="grid2">
+          <div class="card">
+            <div class="stars">★★★★★</div>
+            <p class="small">“Classic BBQ and sides — always hits the spot. Easy takeout and friendly folks.”</p>
+          </div>
+          <div class="card">
+            <div class="stars">★★★★★</div>
+            <p class="small">“Brunswick stew is legit. Great value for feeding a family.”</p>
+          </div>
+          <div class="card">
+            <div class="stars">★★★★★</div>
+            <p class="small">“Perfect for grabbing food for a crowd. Call ahead and pickup is quick.”</p>
+          </div>
+          <div class="card">
+            <div class="stars">★★★★★</div>
+            <p class="small">“Simple, smoky, and consistent — exactly what you want from a local BBQ spot.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>
+        <b style="color:var(--text)">Scott’s BBQ</b>
+        <div class="small">425 GA-87, Cochran, GA 31014</div>
+        <div class="small"><a href="tel:+14789346069">(478) 934-6069</a></div>
+      </div>
+      <div class="small">
+        <div><a href="#menu">Menu</a> • <a href="#catering">Catering</a> • <a href="#location">Directions</a></div>
+        <div style="margin-top:10px;">© <span id="y"></span> Scott’s BBQ</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
